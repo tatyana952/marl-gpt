@@ -1,0 +1,35 @@
+{"train": {
+    "smac": {
+        "config": {"history_len": 6, "history_step": 1, "mask_ratio": 0.5},
+        "map_types": ["protoss", "protoss","terran", "terran","zerg", "zerg"],
+        "folder_paths": ["dataset/protoss_5_vs_5", 
+                         "dataset/protoss_5_vs_6", 
+                         "dataset/terran_5_vs_5", 
+                         "dataset/terran_5_vs_6", 
+                         "dataset/zerg_5_vs_5", 
+                         "dataset/zerg_5_vs_6"]
+    },
+    "pogema": {"config": {"mask_ratio": 0.5},"folder_paths": ["dataset/dataset_pogema_ll/mazes", "dataset/dataset_pogema_ll/random"]},
+    "grf": { "config": {"history_len": 6, "history_step": 1, "mask_ratio": 0.5, "load_part_file": 1},
+            "folder_paths": ["dataset/dataset_grf/trajectories/11vs11a11r_5to10_checkpoint", 
+                             "dataset/dataset_grf/trajectories/11vs11a11r_60to65_checkpoint", 
+                             "dataset/dataset_grf/trajectories/11vs11a11r_99to100_checkpoint", 
+                             "dataset/dataset_grf/trajectories/academy_corner",
+                             "dataset/dataset_grf/trajectories/academy_counterattack_easy",
+                             "dataset/dataset_grf/trajectories/academy_pass_and_shoot_with_keeper"]}
+},
+"val": {
+    "smac": {
+        "config": {"history_len": 6, "history_step": 1},
+        "map_types": ["protoss", "protoss","terran", "terran","zerg", "zerg"],
+        "folder_paths": ["dataset/val_p5", 
+                         "dataset/val_p5", 
+                         "dataset/val_t5", 
+                         "dataset/val_t56", 
+                         "dataset/val_z5",
+                         "dataset/val_z56"]
+    },
+    "pogema": {"config": {},"folder_paths": ["dataset/dataset_pogema_ll/validation"]},
+    "grf": {"config": {"history_len": 6, "history_step": 1, "load_part_file": 1},
+        "folder_paths": ["dataset/dataset_grf/trajectories/val"]}
+}}

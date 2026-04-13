@@ -1,0 +1,13 @@
+pydantic==2.10.6
+wandb
+torch==2.6.0
+sample-factory==2.1.1
+pyarrow==20
+loguru
+prettytable
+matplotlib 
+seaborn 
+tabulate 
+dask 
+distributed
+git+https://github.com/oxwhirl/smacv2.git

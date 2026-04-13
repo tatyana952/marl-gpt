@@ -1,0 +1,37 @@
+FROM ubuntu:20.04 as sc2_downlodaer
+
+RUN apt update && apt install -y \
+    wget unzip && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN mkdir -p "/game" && \
+    wget --show-progress http://blzdistsc2-a.akamaihd.net/Linux/SC2.4.10.zip -O /tmp/SC2.zip && \
+    unzip -q -P iagreetotheeula -o /tmp/SC2.zip -d "/game" && \
+    rm -rf /tmp/SC2.zip
+
+# Final image
+FROM pytorch/pytorch:2.6.0-cuda11.8-cudnn9-runtime as final
+ENV SC2PATH="/workspace/3rdparty/StarCraftII"
+
+# Copy SC2 from the previous stage
+COPY --from=sc2_downlodaer /game/StarCraftII "$SC2PATH"
+
+
+RUN apt update && apt install build-essential ffmpeg libsm6 libxext6 git vim wget unzip python3 python3-pip -y
+
+# Install SMAC maps
+ENV MAP_DIR="$SC2PATH/Maps"
+RUN mkdir -p "$SC2PATH/Maps" && \
+    wget --show-progress https://github.com/oxwhirl/smacv2/releases/download/maps/SMAC_Maps.zip -O /tmp/SMAC_Maps.zip && \
+    unzip -q -o /tmp/SMAC_Maps.zip -d "$SC2PATH/Maps/SMAC_Maps" && \
+    rm -rf /tmp/SMAC_Maps.zip
+
+# Copy uv binaries
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+
+ENV PATH="/root/.local/bin:$PATH"
+ENV UV_SYSTEM_PYTHON=1
+
+# Install Python dependencies
+ADD requirements.txt /tmp/
+RUN uv pip install -U pip && uv pip install -r /tmp/requirements.txt
