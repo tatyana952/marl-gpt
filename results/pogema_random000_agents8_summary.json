@@ -1,0 +1,13 @@
+{
+  "map_name": "validation-random-seed-000",
+  "num_agents": 8,
+  "episode_steps": 256,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "mean_throughput": 0.546875,
+  "sample_std_throughput": 0.02174907954230477,
+  "std_ddof": 1
+}

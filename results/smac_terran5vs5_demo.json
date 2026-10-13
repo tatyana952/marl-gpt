@@ -1,0 +1,20 @@
+{
+  "scenario": "terran_5_vs_5",
+  "model": "out/marl-gpt-main.pt",
+  "device": "cpu",
+  "num_agents": 5,
+  "history_len": 6,
+  "sample_actions": false,
+  "last_token": true,
+  "max_steps": 128,
+  "executed_steps": 92,
+  "episode_finished": true,
+  "runtime_seconds": 51.79977470400627,
+  "team_reward": 20.573031556372545,
+  "episode_stats": {
+    "battle_won": true,
+    "dead_allies": 1,
+    "dead_enemies": 5
+  },
+  "seed_note": "NumPy и PyTorch: 0; seed() обёртки среды не реализован."
+}

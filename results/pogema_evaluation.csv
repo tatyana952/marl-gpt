@@ -1,0 +1,5 @@
+﻿map_name;seed;num_agents;steps;goals;throughput;runtime_seconds
+validation-random-seed-000;0;8;256;135;0.52734375;252.53538008501346
+validation-random-seed-000;1;8;256;146;0.5703125;257.54035153400037
+validation-random-seed-000;2;8;256;139;0.54296875;266.3113907799998
+validation-random-seed-001;0;8;256;472;1.84375;252.29152298699773

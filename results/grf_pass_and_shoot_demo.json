@@ -1,0 +1,33 @@
+{
+  "scenario": "academy_pass_and_shoot_with_keeper",
+  "model": "out/marl-gpt-main.pt",
+  "device": "cpu",
+  "num_agents": 2,
+  "history_len": 6,
+  "sample_actions": false,
+  "last_token": true,
+  "rewards": "scoring",
+  "max_steps": 256,
+  "executed_steps": 31,
+  "episode_finished": true,
+  "runtime_seconds": 5.941724848002195,
+  "player_returns": [
+    1.0,
+    1.0
+  ],
+  "episode_stats": {
+    "score_reward": 1,
+    "current_score_L_R": [
+      1,
+      0
+    ],
+    "goal_difference": 1,
+    "free_kick_count": 0,
+    "goal_kick_count": 0,
+    "corner_count": 0,
+    "throw_in_count": 0,
+    "penalty_count": 0,
+    "current_game_mode": 0
+  },
+  "seed_note": "NumPy и PyTorch: 0; seed движка явно не задан."
+}

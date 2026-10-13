@@ -183,3 +183,7 @@ wandb
 out*
 svg
 logs
+# Local runtime files for evaluation
+/3rdparty/StarCraftII/
+/out/
+/envs/pogema_env/.rendered.observation_generator.cpp

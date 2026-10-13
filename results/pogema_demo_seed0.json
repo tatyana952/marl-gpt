@@ -1,0 +1,14 @@
+{
+  "model": "out/marl-gpt-main.pt",
+  "device": "cpu",
+  "seed": 0,
+  "num_agents": 8,
+  "map_size": 16,
+  "density": 0.15,
+  "max_episode_steps": 64,
+  "executed_steps": 64,
+  "runtime_seconds": 60.24069446600333,
+  "metrics": {
+    "avg_throughput": 0.609375
+  }
+}

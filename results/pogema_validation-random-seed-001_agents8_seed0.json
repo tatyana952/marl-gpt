@@ -1,0 +1,17 @@
+{
+  "model": "out/marl-gpt-main.pt",
+  "device": "cpu",
+  "seed": 0,
+  "num_agents": 8,
+  "map_name": "validation-random-seed-001",
+  "map_source": "eval_configs/01-random/maps.yaml",
+  "map_height": 19,
+  "map_width": 19,
+  "collision_system": "soft",
+  "max_episode_steps": 256,
+  "executed_steps": 256,
+  "runtime_seconds": 252.29152298699773,
+  "metrics": {
+    "avg_throughput": 1.84375
+  }
+}
